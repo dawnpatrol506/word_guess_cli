@@ -1,0 +1,22 @@
+{
+  "name": "word_guess_cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "game.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dawnpatrol506/word_guess_cli.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dawnpatrol506/word_guess_cli/issues"
+  },
+  "homepage": "https://github.com/dawnpatrol506/word_guess_cli#readme",
+  "dependencies": {
+    "readline-sync": "^1.4.9"
+  }
+}
