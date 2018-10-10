@@ -1,5 +1,5 @@
 var Letter = require('./letter');
-const debug = true;
+const debug = false;
 
 module.exports = class Word{
     constructor(word){
@@ -13,17 +13,22 @@ module.exports = class Word{
     }
 
     display(){
-        let displayWord;
+        let displayWord = '';
         this.letters.forEach(letter =>{
-            displayWord += letter.display();
+            displayWord += (letter.display() + ' ');
         });
         console.log(displayWord);
     }
 
     checkGuess(guess){
+        let right = false;
         this.letters.forEach(letter => {
-            letter.checkGuess(guess);
+           if(letter.checkGuess(guess))
+                right = true;
         });
+        if(debug)
+            console.log('WORD: RIGHT: ' + right);
+        return right;
     }
     
 }

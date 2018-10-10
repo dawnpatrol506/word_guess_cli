@@ -6,13 +6,17 @@ module.exports = class Letter{
 
     display(){
         if(this.isGuessed)
-            return letter;
+            return this.letter;
         else
             return '_';
     }
 
     checkGuess(letter){
-        if(letter === this.letter)
+        if(letter === this.letter){
             this.isGuessed = true;
+            return true;
+        }
+        else
+            return false;
     }
 }
