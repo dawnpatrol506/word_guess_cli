@@ -1,13 +1,15 @@
 var Letter = require('./letter');
+const debug = true;
 
 module.exports = class Word{
     constructor(word){
+        if(debug) console.log('CONSTRUCTING WORD');
         this.letters = [];
 
-        this.letters.forEach(letter => {
-            let newletter = new Letter(letter, false);
-            letters.push(newletter);
-        })
+        for(let i = 0; i < word.length; i++){
+            let newletter = new Letter(word[i], false);
+            this.letters.push(newletter);
+        }
     }
 
     display(){

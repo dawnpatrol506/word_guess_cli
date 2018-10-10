@@ -3,7 +3,7 @@ var Readline = require('readline-sync');
 
 class Game{
     constructor(word){
-        this.word = new Word(word);
+        this.word = word;
         this.guesses = 10;
         this.isWon = false;
     };

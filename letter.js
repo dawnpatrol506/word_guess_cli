@@ -5,7 +5,7 @@ module.exports = class Letter{
     }
 
     display(){
-        if(isGuessed)
+        if(this.isGuessed)
             return letter;
         else
             return '_';
